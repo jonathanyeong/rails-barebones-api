@@ -15,7 +15,9 @@ rails server
 
 The template includes [Rails devcontainers](https://github.com/rails/devcontainer) so you don't need to have Rails or Ruby installed!
 
-To use devcontainers inside VSCode, install the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
+To use DevContainers, install `docker`, `docker-compose` and a docker runtime like [Colima](https://github.com/abiosoft/colima). Alternatively, you can install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+
+If using VSCode, install the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). After installation, open the command palette and type `Dev Containers: Reopen in Container`. NOTE: I had to restart VSCode to get it working.
 
 ## Deploying your application
 
