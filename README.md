@@ -7,6 +7,8 @@ After cloning the template, start the server by running:
 ```bash
 # install gems
 bundle install
+# setup rails
+bin/setup
 # start server
 rails server
 ```
