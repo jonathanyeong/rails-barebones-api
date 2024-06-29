@@ -1,24 +1,22 @@
-# README
+# Barebones Rails API template
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A barebones Rails API template ready for you to build your fancy APIs.
 
-Things you may want to cover:
+After cloning the template, start the server by running:
 
-* Ruby version
+```bash
+# install gems
+bundle install
+# start server
+rails server
+```
 
-* System dependencies
+## Devcontainers
 
-* Configuration
+The template includes [Rails devcontainers](https://github.com/rails/devcontainer) so you don't need to have Rails or Ruby installed!
 
-* Database creation
+To use devcontainers inside VSCode, install the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
 
-* Database initialization
+## Deploying your application
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This template also includes [Kamal](https://kamal-deploy.org/). Adjust the `config/deploy.yml` file to fit your deployment needs.
