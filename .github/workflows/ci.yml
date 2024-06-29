@@ -40,6 +40,15 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    services:
+      mysql:
+        image: mysql
+        env:
+          MYSQL_ALLOW_EMPTY_PASSWORD: true
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
     # services:
     #  redis:
     #    image: redis
@@ -48,7 +57,7 @@ jobs:
     #    options: --health-cmd "redis-cli ping" --health-interval 10s --health-timeout 5s --health-retries 5
     steps:
       - name: Install packages
-        run: sudo apt-get update && sudo apt-get install --no-install-recommends -y google-chrome-stable curl libjemalloc2
+        run: sudo apt-get update && sudo apt-get install --no-install-recommends -y google-chrome-stable curl default-mysql-client libjemalloc2
 
       - name: Checkout code
         uses: actions/checkout@v4
@@ -62,9 +71,10 @@ jobs:
       - name: Run tests
         env:
           RAILS_ENV: test
+          DATABASE_URL: mysql2://127.0.0.1:3306
           # REDIS_URL: redis://localhost:6379/0
         # run: bin/rails db:test:prepare test test:system # Since we don't have ActiveRecord we have no DB to prepare
-        run: bin/rails test test:system
+        run: bin/rails db:test:prepare test test:system
 
       - name: Keep screenshots from failed system tests
         uses: actions/upload-artifact@v4

@@ -9,7 +9,7 @@
   // Features to add to the dev container. More info: https://containers.dev/features.
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {},
-    "ghcr.io/rails/devcontainer/features/mysql-client": {}
+    "ghcr.io/rails/devcontainer/features/mysql-client:latest": {}
   },
 
   "containerEnv": {
@@ -17,7 +17,7 @@
   },
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  "forwardPorts": [3000, 3306],
+  "forwardPorts": [3000],
 
   // Configure tool-specific properties.
   // "customizations": {},
@@ -27,5 +27,7 @@
 
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "bin/setup"
+  "postCreateCommand": "bin/setup",
+
+  "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}"
 }
