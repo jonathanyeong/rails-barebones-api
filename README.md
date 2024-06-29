@@ -1,6 +1,6 @@
 # Barebones Rails API template
 
-A barebones Rails API template ready for you to build your fancy APIs. This template has almost every Rails feature removed, including ActiveRecord.
+A barebones Rails API template ready for you to build your fancy APIs. This template uses mysql as the database.
 
 After cloning the template, start the server by running:
 
@@ -18,7 +18,7 @@ rails new rails-api-template \
   --main --skip-action-mailer --skip-action-mailbox \
   --skip-action-text --skip-active-job \
   --skip-active-storage --skip-action-cable \
-  --skip-asset-pipeline --skip-active-record \
+  --skip-asset-pipeline --database=mysql \
   --api --devcontainer
 ```
 
