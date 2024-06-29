@@ -11,6 +11,14 @@ bundle install
 rails server
 ```
 
+This template was generated using these rails new flags:
+
+```bash
+rails new rails-api-template --main --skip-action-mailer --skip-action-mailbox --skip-action-text --skip-active-job --skip-active-storage --skip-action-cable --skip-asset-pipeline --skip-active-record --api --devcontainer
+```
+
+Afterwards, I replaced Rails `main` with a stable version of Rails.
+
 ## Devcontainers
 
 The template includes [Rails devcontainers](https://github.com/rails/devcontainer) so you don't need to have Rails or Ruby installed!
