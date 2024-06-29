@@ -15,8 +15,9 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password:
-  host: mysql
+  host: mysql # service defined in .devcontainer/compose.yaml
   port: 3306
+  socket: /tmp/mysql.sock
 
 development:
   <<: *default
