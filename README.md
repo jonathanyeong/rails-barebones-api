@@ -4,7 +4,7 @@ A barebones Rails API template ready for you to build your fancy APIs.
 
 Features:
 - API only (no javascript)
-- MySql database
+- mysql database
 - Devcontainers
 - Github Actions CI workflow
 - [Kamal](https://kamal-deploy.org/) for deploying your app
