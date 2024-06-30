@@ -58,9 +58,8 @@ This template was generated using these rails new flags, then Rails `main` was r
 
 ```bash
 rails new rails-api-template \
-  --main --skip-action-mailer --skip-action-mailbox \
+  --skip-action-mailer --skip-action-mailbox --skip-asset-pipeline \
   --skip-action-text --skip-active-job \
   --skip-active-storage --skip-action-cable \
-  --skip-asset-pipeline --skip-bundle \
-  --database=mysql --api --devcontainer
+  --database=mysql --api --devcontainer --main
 ```
