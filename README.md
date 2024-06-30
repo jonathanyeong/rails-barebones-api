@@ -61,6 +61,6 @@ rails new rails-api-template \
   --main --skip-action-mailer --skip-action-mailbox \
   --skip-action-text --skip-active-job \
   --skip-active-storage --skip-action-cable \
-  --skip-asset-pipeline --database=mysql \
-  --api --devcontainer
+  --skip-asset-pipeline --skip-bundle \
+  --database=mysql --api --devcontainer
 ```
